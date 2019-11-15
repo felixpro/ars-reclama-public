@@ -1,0 +1,2900 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  src: url("font/ayuthaya.ttf");
+  font-family: Ayuthaya;
+}
+
+#reclamation_therapist {
+  width: 100%;
+}
+
+.container_terapist {
+  overflow: hidden;
+}
+
+
+
+.delete_historial {
+  a {
+    position: relative;
+      left: -55px;
+      top: -40px;
+&:active,
+&:focus,
+&:hover,
+&:visited {
+  background: none;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+}
+  }
+}
+
+.delete_btn {
+      padding: 11px 30px !important;
+      position: relative;
+      top: 2px;
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        background: none;
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+      }
+}
+
+
+#edit_modal_section {
+  .modal-dialog {
+    min-width: 80%;
+    background: transparent;
+    @media (max-width: 1520px) {
+      min-width: 90%;
+    }
+  .edit_container {
+    padding: 49px 200px;
+    border-radius: 8px;
+    @media (max-width: 1520px) {
+      padding: 49px 50px;
+    }
+  }
+
+  }
+}
+
+#alert {
+  box-shadow:0 0 0 9999px rgba(0,0,0,.6);
+  margin-left: 30%;
+  margin-top: 15%;
+  position: absolute;
+  z-index: 99999;
+  background: #ffffff;
+  height: 344px;
+  width: 672px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin-left: 40%;
+    margin-bottom: 15px;
+  }
+  p {
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.66;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1e2469;
+  }
+}
+
+.hide_navbar {
+  display: none;
+  padding: 10px 0;
+  @media (max-width: 1400px) {
+    display: block;
+  }
+
+
+
+  .navbar-nav {
+    a {
+      background: none;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        background: none;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+
+    .inicio {
+      display: flex;
+      align-items: baseline;
+      margin-right: 50px;
+
+      img {
+        width: 22px;
+        height: 21px;
+        position: relative;
+        top: 1.5px;
+      }
+    }
+
+    .clientes {
+      display: flex;
+      align-items: baseline;
+
+      img {
+        width: 23px;
+        height: 20px;
+        position: relative;
+        top: 1.5px;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .collapse {
+    display: flex;
+    justify-content: flex-end;
+
+    .nav_logo {
+      width: 100px;
+    }
+  }
+}
+
+.modal-body {
+  padding: 0 !important;
+}
+
+input {
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+aside {
+  flex-direction: column;
+  float: left;
+  // border: 1px solid red;
+  padding-top: 27px;
+  width: 15.5%;
+  height: 100% !important;
+  background: #fff;
+  @media (max-width: 1400px) {
+    display: none !important;
+  }
+
+  .img_hospital {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 23px;
+
+    img {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      text-align: left;
+      width: 100%;
+      height: 74px;
+      display: flex;
+      align-items: center;
+      padding-left: 35px;
+      @media (max-width: 1475px) {
+        padding-left: 20px;
+      }
+
+      &:hover {
+        background-color: rgba(132, 187, 199, 0.08);
+
+        a {
+          color: #17cb9a;
+          text-decoration: none;
+        }
+      }
+
+      img {
+        float: left;
+        margin-right: 28px;
+      }
+
+      a {
+        font-family: Raleway;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        background: red;
+        text-decoration: none;
+        background: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          box-shadow: none;
+          border: none;
+          outline: none;
+          text-decoration: none;
+          background: none;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+.hide_content {
+  visibility: hidden;
+}
+
+.link_style {
+  background: none;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+
+  &:focus,
+  &:hover,
+  &:hover,
+  &:visited {
+    background: none;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.show_general_info {
+  .logo_show {
+    width: 250px;
+
+    img.humano_logo {
+      width: 119px;
+    }
+
+    h1 {
+      font-family: Raleway;
+      font-size: 35px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1e2469;
+      padding: 45px 0;
+    }
+
+    .close_image {
+      position: relative;
+      top: -27px;
+      left: 27px;
+      outline: none;
+      text-decoration: none;
+      box-shadow: none;
+      border: none;
+      background: none;
+      opacity: inherit;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        outline: none;
+        text-decoration: none;
+        box-shadow: none;
+        border: none;
+        background: none;
+        opacity: inherit;
+      }
+    }
+
+    .insurance_buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      button {
+        width: 243px;
+        height: 49px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      #humano {
+        margin-right: 33px;
+        background-color: #02bbec;
+
+        &:focus,
+        &:hover,
+        &:hover,
+        &:visited {
+          text-decoration: none;
+          outline: none;
+          box-shadow: none;
+          border: none;
+        }
+      }
+
+      #cenasa {
+        background-color: #a9cf45;
+        margin-right: 33px;
+
+        &:focus,
+        &:hover,
+        &:hover,
+        &:visited {
+          text-decoration: none;
+          outline: none;
+          box-shadow: none;
+          border: none;
+        }
+      }
+
+      #Naseguro {
+        border: solid 2px #979797;
+        background: none;
+      }
+    }
+
+    .modal-dialog {
+      max-width: 937px;
+    }
+
+    .modal-content {
+      border-radius: 8px;
+    }
+
+    a {
+      font-family: Raleway;
+      font-size: 12px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #50aa91;
+      background: none;
+      text-decoration: none;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      position: relative;
+      padding-left: 15px;
+      top: 5px;
+
+      &:focus,
+      &:hover,
+      &:hover,
+      &:visited {
+        background: none;
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        color: #50aa91;
+      }
+
+      img {
+        width: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+/// End show_general_info
+
+.cancel_button {
+  opacity: inherit !important;
+  padding: inherit !important;
+}
+
+.reclamation_section {
+  overflow: auto;
+  height: 300px;
+  .modal-body {
+    overflow: auto;
+    overflow-y: none;
+  }
+
+  .modal {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .modal-full {
+    min-width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .modal.show {
+    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .new_reclamation {
+    .reclamation_header {
+      padding-top: 36px;
+      padding-left: 60px;
+      display: flex;
+      justify-content: center;
+      @media (max-width: 1640px) {
+        padding-top: 60px;
+        padding-left: 0;
+
+        .container {
+          padding: 0!important !important;
+        }
+      }
+
+      .logo {
+        float: left;
+        height: 49px;
+        display: flex;
+        align-items: center;
+
+        .humano_logo {
+          width: 119px;
+          height: 20.2px;
+        }
+      }
+
+      .therapies_form {
+        p {
+          float: left;
+        }
+
+        .authNum_container {
+          float: left;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            margin: 0;
+            opacity: 0.7;
+            font-family: Raleway;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            padding-right: 17px;
+          }
+
+          .authNum {
+            width: 130px;
+            height: 49px;
+            opacity: 0.68;
+            border-radius: 8px;
+            border: solid 1px #bbbade;
+          }
+        }
+
+        .quantity_therapies {
+          input {
+            font-family: Raleway;
+            font-size: 35px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #17cb9a;
+          }
+        }
+
+        .therapies_input {
+          height: 49px;
+          display: flex;
+          padding-left: 25px;
+
+          p {
+            margin: 0;
+            align-self: center;
+            opacity: 0.7;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+
+          input {
+            border: none;
+            width: 48px;
+            border-bottom: solid 2px #bbbade;
+            text-align: center;
+            margin-left: 19px;
+          }
+        }
+      }
+    }
+
+    .body_reclamation {
+      // padding-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      .date {
+        bottom: -8px !important;
+      }
+      .ceationDate {
+        position: relative;
+        // bottom: 8px;
+        width: 178px;
+        height: 30px;
+        p {
+          margin: 0;
+          width: 50px;
+        }
+
+        div {
+          padding-right: 30px;
+        }
+
+        span {
+          display: block;
+          width: 178px;
+        }
+
+        input {
+          box-shadow: none;
+          outline: none;
+          text-decoration: none;
+          border: none;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            box-shadow: none;
+            border: none;
+            outline: none;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .first_row,
+      .second_row {
+        display: flex;
+
+        p {
+          margin: 0;
+        }
+
+        div {
+          padding-right: 30px;
+        }
+
+        span {
+          display: block;
+          width: 178px;
+          height: 30px;
+        }
+
+        input {
+          box-shadow: none;
+          outline: none;
+          text-decoration: none;
+          border: none;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            box-shadow: none;
+            border: none;
+            outline: none;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .customer_inputs {
+        padding-left: 60px;
+        @media (max-width: 1640px) {
+          padding-left: 0;
+          padding-top: 20px;
+
+          .container {
+            padding: 0 !important;
+          }
+        }
+
+        .name {
+          padding-top: 30px;
+          padding-bottom: 34px;
+
+          p {
+            margin: 0;
+          }
+
+          span {
+            font-family: Raleway;
+            font-size: 35px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #1e2469;
+            display: block;
+            width: 400px;
+          }
+        }
+
+        span {
+          border-bottom: solid 1px #bbbade;
+          padding-bottom: 9px;
+        }
+
+        .first_row {
+          padding-bottom: 34px;
+        }
+
+        .selecciona {
+          position: relative;
+          left: -25px;
+          margin: 0;
+        }
+
+        .humano_btn_type {
+          display: flex;
+          button {
+            margin: 5px;
+          padding: 5px 10px;
+          font-size: 14px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          box-shadow: none;
+          text-decoration: none;
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            box-shadow: none;
+            outline: none;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+          }
+
+          }
+            .humano_style {
+            background: #00b2e3;
+            color: #fff;
+          }
+            .primera_style {
+            background:#2d7bb7;
+            color: #fff;
+          }
+
+          .active_button {
+            background: none !important;
+            color: #000 !important;
+            border: 1px solid #000000 !important;
+          }
+
+        }
+
+        .service_input {
+          position: relative;
+          top: -13px;
+          @media (max-width: 1485px) {
+            // left: 50px;
+          }
+          @media (max-width: 1400px) {
+            left: 0;
+          }
+
+          .therapies_input {
+            height: 49px;
+
+            p {
+              margin: 0;
+              align-self: center;
+              opacity: 0.7;
+              font-family: Raleway;
+              font-size: 12px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #000000;
+              width: 70px;
+            }
+
+            input {
+              border: none;
+              width: 100%;
+              text-align: center;
+            }
+          }
+
+
+        }
+
+        .service_container {
+          h6 {
+            width: 149px;
+            height: 14px;
+            opacity: 0.7;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+
+          h4 {
+            float: left;
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            width: 150px;
+            overflow: hidden;
+            height: 22px;
+          }
+
+          h5 {
+            display: flex;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #50aa91;
+
+            .edit_link {
+              margin-top: 5px;
+            }
+
+            i {
+              font-size: 16px;
+              margin-top: 4px;
+            }
+          }
+
+          h3 {
+            float: left;
+            position: relative;
+            bottom: 12px;
+            padding-right: 12px;
+            color: #50aa91;
+          }
+
+          .services_links {
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #50aa91;
+          }
+
+          .edit_content {
+            overflow: auto;
+            width: 220px;
+            height: 82px;
+            overflow-x: visible;
+            margin-bottom: 10px;
+
+            i {}
+          }
+
+          .add_service {
+            width: 178px;
+            border-bottom: solid 1px #bbbade;
+            display: block;
+            padding-bottom: 9px;
+          }
+        }
+      }
+    }
+
+    .bottom_reclamation {
+      .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .content {
+        background-color: #ffff;
+        padding-top: 45px;
+        margin: 0 !important;
+
+        .button_column {
+          @media (max-width: 1640px) {
+            max-width: 100%;
+            display: flex;
+            flex: none;
+            justify-content: center;
+          }
+        }
+
+        .col-lg-10 {
+          @media (max-width: 1640px) {
+            max-width: 100%;
+            display: flex;
+            flex: none;
+            justify-content: center;
+          }
+        }
+
+        .row {
+          padding: 50px 60px 30px 60px;
+          background-color: #f4f7f6;
+
+        }
+
+        .buttons_container {
+          text-align: center;
+
+          .imprimir {
+            border: none;
+            background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+          }
+
+          button.cancelar,
+          button.save {
+            background: transparent;
+            text-decoration: none;
+            box-shadow: none;
+            outline: none;
+            color: #6c757d;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              box-shadow: none;
+              outline: none;
+              text-decoration: none;
+              background: transparent;
+              color: #6c757d;
+            }
+          }
+
+          button {
+            width: 202px;
+            height: 49px;
+            margin-bottom: 23px;
+            @media (max-width: 1640px) {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // end New reclamation
+}
+// end relcamation section
+
+.print_Section {
+  padding: 0 10px;
+}
+
+.show_general_info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  @media (max-width: 1640px) {
+    top: unset;
+  }
+
+  .view_information_section {
+    background-color: #f4f7f6;
+    height: 100%;
+    width: 27%;
+    padding: 36px 100px;
+    @media (max-width: 1640px) {
+      width: auto;
+    }
+
+    a.reload_page {
+      border: 1px solid #6e6d8c;
+      box-shadow: none;
+      outline: none;
+      text-decoration: none;
+      background: none;
+      font-family: Raleway;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6e6d8c;
+      padding: 8px 25px;
+      position: relative;
+      top: 70px;
+      left: -70px;
+
+      border-radius: 5px;
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+        background: none;
+        color: #6e6d8c;
+        border: 1px solid #6e6d8c;
+
+      }
+    }
+
+    .class_auto_over {
+      overflow-y: auto !important;
+    }
+
+    .customer_info_humano {
+
+      width: 270px;
+      overflow: hidden ;
+
+    }
+
+    a.reload_page_humano {
+      border: 1px solid #6e6d8c;
+      box-shadow: none;
+      outline: none;
+      text-decoration: none;
+      background: none;
+      font-family: Raleway;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6e6d8c;
+      padding: 8px 25px;
+      position: relative;
+      top: 30px;
+
+
+      border-radius: 5px;
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+        background: none;
+        color: #6e6d8c;
+        border: 1px solid #6e6d8c;
+
+      }
+    }
+
+    .customer_info {
+      height: 220px;
+      width: 270px;
+      overflow: hidden ;
+    }
+
+    a.view_info {
+      font-family: Raleway;
+      font-size: 12px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #50aa91;
+      box-shadow: none;
+      outline: none;
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      position: relative;
+      top: 25px;
+      cursor: pointer;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+        background: transparent;
+        border: none;
+        color: #50aa91;
+
+      }
+
+      img {
+        width: 10px;
+        margin-left: 13px;
+      }
+    }
+
+    .logo_show {
+      padding-bottom: 45px;
+    }
+
+    .adress {
+      display: flex;
+      padding-bottom: 10px;
+      input {
+        background: none;
+      }
+      span {
+        background: none;
+      }
+      strong {
+        float: left;
+      }
+    }
+
+    .space {
+      padding-top: 20px;
+
+      strong {
+        font-family: Raleway;
+        margin-right: 10px;
+      }
+    }
+
+    .display_box {
+      display: flex;
+      align-items: center;
+
+      input {
+        background: none;
+        width: 100%;
+      }
+
+      img {
+        margin-right: 24px;
+      }
+
+      p {
+        margin: 0 0 3px;
+      }
+    }
+
+    h1.name {
+      font-family: Raleway;
+      font-size: 35px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #1e2469;
+      display: inline;
+
+      input {
+        width: 100%;
+        background: transparent;
+      }
+    }
+
+    .view_more_buttons {
+      position: absolute;
+      bottom: 20px;
+      .content {
+        padding: 45px 0;
+
+        .close_icon {
+          position: relative;
+          top: -75px;
+          left: 27px;
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+          border: none;
+          background: none;
+          opacity: inherit;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+            border: none;
+            background: none;
+            opacity: inherit;
+          }
+        }
+
+        .input_content {
+          display: flex;
+          justify-content: center;
+
+          label {
+            opacity: 0.7;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            margin: 0;
+            padding-right: 10px;
+            position: relative;
+            top: 15px;
+          }
+
+          input {
+            border: none;
+            border-bottom: solid 1px #979797;
+            background: none;
+            text-decoration: none;
+            box-shadow: none;
+            width: 70px;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 35px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #17cb9a;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {}
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+              border-bottom: solid 1px #979797;
+            }
+          }
+        }
+
+        h1 {
+          font-family: Raleway;
+          font-size: 35px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.66;
+          letter-spacing: normal;
+          text-align: center;
+          color: #1e2469;
+          padding-bottom: 45px;
+        }
+
+        .buttons_container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding-top: 50px;
+
+          button {
+            width: 202px;
+            height: 49px;
+            border-radius: 8px;
+            margin-right: 28px;
+          }
+
+          .cancel {
+            border: solid 2px #bbbade;
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+              border: solid 2px #bbbade;
+            }
+          }
+
+          .save {
+            color: #fff;
+            outline: none;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+            background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              outline: none;
+              text-decoration: none;
+              color: #fff;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .modal-dialog {
+        max-width: 937px;
+      }
+
+      button.procedimientos {
+        position: relative;
+        top: 10px;
+      }
+
+      button.historial_clinic {
+        background-image: linear-gradient(285deg, #7f00ff, #e100ff);
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 248px;
+        height: 49px;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          box-shadow: none;
+          outline: none;
+          text-decoration: none;
+          color: #fff;
+        }
+        img {
+          width: 19px;
+          margin-right: 21px;
+        }
+      }
+
+
+
+
+
+      #historial_modal_humano,
+      #historial_modal_senasa,
+      #procedimiento_modal_humano,
+      #procedimiento_modal_senasa
+
+        {
+        padding: 0 !important;
+        background: #ffff;
+
+        .modal-dialog {
+          min-width: 100%;
+          height: 1100px !important;
+          margin: 0;
+          .modal-content {
+            position: absolute;
+            min-height: 100%;
+            border: none;
+          }
+        }
+
+          .button_container_historial {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 25px;
+            padding-bottom: 20px;
+            button.save_historial {
+              width: 202px;
+                height: 49px;
+                opacity: 0.6;
+                border-radius: 8px;
+                font-family: Raleway;
+              font-size: 16px;
+              font-weight: 600;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #6e6d8c;
+              background: none;
+              border: solid 2px #bbbade;
+              margin-right: 26px;
+            }
+            button.print_historial {
+              color: #ffffff;
+              width: 202px;
+              height: 49px;
+              border-radius: 8px;
+              box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+              background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+              img {
+                margin-right: 17px;
+              }
+            }
+          }
+
+
+        aside {
+          float: left;
+        }
+
+
+      }
+
+      //historial_modal
+
+
+      // historial modal 2
+
+      .delete_customer {
+        padding-top: 38px;
+        .modal-dialog  {
+          max-width: 641px;
+          .modal-body {
+            .delete_content {
+              padding-bottom: 63px;
+              h1 {
+                font-family: Raleway;
+                font-size: 35px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.66;
+                letter-spacing: normal;
+                text-align: center;
+                color: #1e2469;
+                padding: 41px 0px;
+              }
+
+              button.delete_btn {
+                width: 202px;
+              height: 49px;
+              opacity: 0.6;
+              border-radius: 8px;
+                 border: solid 2px #979797;
+              font-family: Raleway;
+               font-size: 16px;
+               font-weight: 600;
+               font-style: normal;
+               font-stretch: normal;
+               line-height: normal;
+               letter-spacing: normal;
+               color: #6e6d8c;
+               &:active,
+               &:focus,
+               &:hover,
+               &:visited {
+                  background: none;
+                  outline: none;
+                  box-shadow: none;
+               }
+              }
+              button.dimiss_modal {
+                width: 202px;
+                height: 49px;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+                background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+                margin-left: 26px;
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  border: none;
+                   text-decoration: none;
+                   outline: none;
+                }
+              }
+
+              .btn_content {
+                display: flex;
+                justify-content: center;
+                a {
+                    background: none;
+                    text-decoration: none;
+
+                    &:active,
+                    &:focus,
+                    &:hover,
+                    &:visited {
+                      background: none;
+                      box-shadow: none;
+                      outline: none;
+                    }
+                }
+
+              }
+            }
+          }
+        }
+        a {
+          font-size: 16px;
+          display: flex;
+          box-shadow: none;
+          outline: none;
+          text-decoration: none;
+          color: #000;
+          background: none;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            background: none;
+            box-shadow: none;
+            outline: none;
+            text-decoration: none;
+            color: #000;
+          }
+
+          img {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .left_section {
+    width: 57.5%;
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+
+    .therapies_section {
+      .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px #979797;
+        padding: 28px 90px 28px 58px !important;
+
+        p {
+          font-family: Raleway;
+          font-size: 19px;
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+        }
+
+        p.text {
+          color: #3f48ad;
+        }
+
+        p.number {
+          color: #e102ff;
+        }
+      }
+
+      .historial_therapies_container {
+        box-shadow: 0 26px 18px 0 rgba(0, 0, 0, 0.03);
+        padding-bottom: 35px;
+        .container-fluid {
+          .row {
+            .box {
+              width: 100%;
+              height: 100%;
+              overflow: scroll;
+              display: contents;
+              .therapies_num_container {
+                // position: absolute;
+                    display: contents;
+              }
+            }
+            .delete_container {
+              margin-right: 45px;
+                padding-top: 30px;
+              .delete_box {
+                width: 73px;
+                height: 66px;
+                opacity: none;
+                border: none;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                box-shadow: none;
+                background: green;
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  outline: none;
+                  text-decoration: none;
+                  box-shadow: none;
+                  border: none;
+                  opacity: inherit;
+                }
+              }
+            }
+
+            .mimu {
+              position: absolute;
+            }
+
+          }
+        }
+
+
+        .content_historial_naseguro {
+          padding-left: 58px;
+          // position: absolute;
+          height: 300px;
+          width: 100%;
+          background: #fff;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          .delete_container {
+            margin-right: 45px;
+  padding-top: 30px;
+  .delete_box {
+    width: 73px;
+    height: 66px;
+    opacity: none;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: none;
+    background: green;
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      outline: none;
+      text-decoration: none;
+      box-shadow: none;
+      border: none;
+      opacity: inherit;
+    }
+  }
+          }
+          button.number_container {
+            margin-right: 45px;
+            padding-top: 30px;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              border: none;
+              background: none;
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+            }
+            a {
+              width: 73px;
+              height: 66px;
+              opacity: 0.68;
+              border-radius: 8px;
+              border: solid 2px #bbbade;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              box-shadow: none;
+              &:active,
+              &:focus,
+              &:hover,
+              &:visited {
+                background: none;
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+              }
+              img {
+                background: #e2e2ef;
+              }
+            }
+          }
+
+          p {
+            opacity: 0.48;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            position: relative;
+            left: 5px;
+            top: 8px;
+          }
+        }
+
+        .content_historial {
+          width: 100%;
+          height: 300px;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          padding-left: 58px;
+          button.number_container {
+            margin-right: 45px;
+            padding-top: 30px;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              border: none;
+              background: none;
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+            }
+            a {
+              width: 73px;
+              height: 66px;
+              opacity: 0.68;
+              border-radius: 8px;
+              border: solid 2px #bbbade;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              box-shadow: none;
+              &:active,
+              &:focus,
+              &:hover,
+              &:visited {
+                background: none;
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+              }
+              img {
+                background: #e2e2ef;
+              }
+            }
+          }
+
+          p {
+            opacity: 0.48;
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            position: relative;
+            left: 5px;
+            top: 8px;
+          }
+        }
+
+        .buttons_container_index {
+          padding-left: 58px;
+          display: flex;
+          align-items: center;
+          padding-top: 20px;
+
+          .modal-dialog {
+            max-width: 937px;
+          }
+
+          .content {
+            padding: 45px 0;
+
+            .close_icon {
+              position: relative;
+              top: -75px;
+              left: 27px;
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+              border: none;
+              background: none;
+              opacity: inherit;
+
+              &:active,
+              &:focus,
+              &:hover,
+              &:visited {
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+                border: none;
+                background: none;
+                opacity: inherit;
+              }
+            }
+
+            .input_content {
+              display: flex;
+              justify-content: center;
+
+              label {
+                opacity: 0.7;
+                font-family: Raleway;
+                font-size: 12px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+                margin: 0;
+                padding-right: 10px;
+                position: relative;
+                top: 15px;
+              }
+
+              input {
+                border: none;
+                border-bottom: solid 1px #979797;
+                background: none;
+                text-decoration: none;
+                box-shadow: none;
+                width: 70px;
+                text-align: center;
+                font-family: Raleway;
+                font-size: 35px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #17cb9a;
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {}
+
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  outline: none;
+                  text-decoration: none;
+                  box-shadow: none;
+                  border-bottom: solid 1px #979797;
+                }
+              }
+            }
+
+            h1 {
+              font-family: Raleway;
+              font-size: 35px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.66;
+              letter-spacing: normal;
+              text-align: center;
+              color: #1e2469;
+              padding-bottom: 45px;
+            }
+
+            .buttons_container {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              padding-top: 50px;
+
+              button {
+                width: 202px;
+                height: 49px;
+                border-radius: 8px;
+                margin-right: 28px;
+              }
+
+              .cancel {
+                border: solid 2px #bbbade;
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  outline: none;
+                  text-decoration: none;
+                  box-shadow: none;
+                  border: solid 2px #bbbade;
+                }
+              }
+
+              .save {
+                color: #fff;
+                outline: none;
+                text-decoration: none;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+                background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  outline: none;
+                  text-decoration: none;
+                  color: #fff;
+                  border: none;
+                }
+              }
+            }
+          }
+
+          button.reclamation_btn {
+            width: 277px;
+            height: 49px;
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #6e6d8c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+
+            img {
+              width: 22px;
+              height: 22px;
+              margin-right: 17px;
+            }
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              box-shadow: none;
+              outline: none;
+              text-decoration: none;
+              background: transparent;
+            }
+          }
+
+          a {
+            font-family: Raleway;
+            font-size: 12px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #50aa91;
+            box-shadow: none;
+            outline: none;
+            text-decoration: none;
+            background: none;
+            margin-left: 25px;
+
+            img {
+              width: 10px;
+              margin-left: 10px;
+            }
+
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              box-shadow: none;
+              outline: none;
+              text-decoration: none;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+
+    .index_reclamation_section {
+      .header {
+        padding: 21px 90px 21px 58px;
+        border-bottom: solid 1px #bbbade;
+        clear: both;
+        height: 65px;
+
+        p.title {
+          font-size: 19px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #3f48ad;
+          float: left;
+        }
+      }
+
+      .list {
+        justify-content: flex-end;
+        li {
+          .active {
+            border-bottom: solid 3px #17cb9a;
+            background: none;
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+          }
+          a {
+            padding-bottom: 10px;
+            border-bottom: solid 3px transparent;
+            position: relative;
+            top: 11px;
+            transition-duration: 1s;
+            text-decoration: none;
+            font-family: Raleway;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3f48ad;
+            &:focus,
+            &:visited {
+              background: none;
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+            }
+          }
+          a.reclam_link {
+            margin-right: 29px;
+          }
+
+          a.terapias {
+            margin-right: 29px;
+          }
+        }
+      }
+
+      .therapie_container {
+        padding-top: 34px;
+        padding-right: 50px;
+        padding-left: 58px;
+        height: 300px;
+        overflow-y: auto;
+        button.number_container {
+          margin-right: 45px;
+          padding-top: 30px;
+          background: none;
+          border: none;
+          p.appointment_date {
+             font-family: Raleway;
+             font-size: 12px;
+             font-weight: 500;
+             padding-top: 10px;
+          }
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            border: none;
+            background: none;
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+          }
+          a {
+            width: 73px;
+            height: 66px;
+            opacity: 0.68;
+            border-radius: 8px;
+            border: solid 2px #bbbade;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: none;
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+              background: none;
+              outline: none;
+              text-decoration: none;
+              box-shadow: none;
+            }
+
+            img {
+              background: #e2e2ef;
+            }
+          }
+        }
+      }
+
+      .reclam_historial_content {
+        padding-top: 34px;
+        padding-right: 50px;
+        padding-left: 58px;
+        .modal-content {
+          border: none;
+        }
+
+
+        button.reclam_button {
+          background: none;
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+          border: none;
+          margin-right: 45px;
+          cursor: pointer;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            border: none;
+            background: none;
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+          }
+        }
+
+        p.r {
+          width: 73px;
+          height: 66px;
+          border-radius: 8px;
+          border: solid 2px #bbbade;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Raleway;
+          font-size: 35px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #bbbade;
+        }
+
+        p.date_reclam {
+          margin-top: 0;
+          font-family: Raleway;
+          font-size: 12px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #bbbade;
+          margin-bottom: 6px;
+        }
+
+        p.ensure {
+          font-family: Raleway;
+          font-size: 12px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #bbbade;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+#nilu {
+  color: red;
+}
+
+.reclam_historial_content {
+  .diagnostic_input_histori {
+    input {
+      color: #000;
+      border-bottom: solid 1px #bbbade!important;
+      padding-bottom: 4px;
+
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+
+  .modal {
+    padding-right: 0 !important;
+  }
+
+  .modal-dialog {
+    min-width: 100%;
+    height: 100%;
+    margin: 0 !important;
+
+    p.auth_reclam {
+      width: 130px;
+      height: 49px;
+      opacity: 0.68;
+      border-radius: 8px;
+      border: solid 1px #bbbade;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p.number_reclam {
+      margin-left: 13px;
+      font-family: Raleway;
+      font-size: 35px !important;
+      font-weight: bold !important;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #17cb9a !important;
+      margin-left: 10px !important;
+      border-bottom: solid 1px #bbbade;
+      padding-bottom: 10px;
+    }
+  }
+}
+/// End reclam_historial_content
+
+.index_customer_section {
+  .right_side {
+    width: 84.5%;
+    float: right;
+    background: #edf3f1;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    @media (max-width: 1400px) {
+      width: 100%;
+      float: none;
+    }
+
+    .new_buttons {
+      background: #f7f7fb;
+      width: 100%;
+      padding: 49px 0 60px;
+
+      h2 {
+        font-family: Raleway;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3f48ad;
+        margin-bottom: 30px;
+      }
+
+      .humano {
+        background-color: #02bbec;
+      }
+
+      .cenasa {
+        background-color: #a9cf45;
+      }
+
+      .noSeguro {
+        border: solid 2px #979797;
+        outline: none;
+        text-decoration: none;
+        box-shadow: none;
+        background: none;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+          background: none;
+        }
+      }
+
+      a {
+        height: 49px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        // margin-right: 33px;
+        font-family: Raleway;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: none;
+        text-transform: uppercase;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .customer_info_container {
+      background: #fff;
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 48px;
+      // margin-left: 80px;
+      height: 570px;
+      // float: left;
+      .customer_body {
+        overflow-y: auto;
+        width: 100%;
+        height: 86%;
+
+      }
+
+      .header {
+        .header_content {
+          display: flex;
+          justify-content: space-between;
+        }
+        padding: 28px 15px 19px 26px;
+        border-bottom: solid 1px #979797;
+
+        h2 {
+          font-family: Raleway;
+          font-size: 19px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #3f48ad;
+        }
+
+        .search_section {
+          .submit_image {
+            width: 19px;
+            margin-right: 14px;
+          }
+
+          input {
+            width: 110px;
+            border: none;
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    .borrador_container {
+      height: 100%;
+      width: 100%;
+      // float: right;
+      // margin-right: 100px;
+      padding-top: 48px;
+      border-radius: 8px;
+
+      .borrador_content {
+        width: 100%;
+        height: 47%;
+        background: #fff;
+        border-radius: 8px;
+        .index_draft {
+          height: 190px;
+          overflow: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: .5;
+        }
+
+        .header {
+          padding: 28px 0 19px 32px;
+          border-bottom: solid 1px #979797;
+
+          h2 {
+            font-family: Raleway;
+            font-size: 19px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3f48ad;
+          }
+        }
+      }
+
+      .estadisticas {
+        width: 100%;
+        height: 47%;
+        background: #fff;
+        position: relative;
+        bottom: 0;
+        margin-top: 6%;
+        border-radius: 8px;
+
+        .header {
+          padding: 28px 0 19px 32px;
+          border-bottom: solid 1px #979797;
+          display: flex;
+          justify-content: space-between;
+
+          h2 {
+            font-family: Raleway;
+            font-size: 19px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3f48ad;
+          }
+
+          ul {
+            li {
+              .active {
+                color: #14b7d6 !important;
+                border-bottom: 1px solid #14b7d6 !important;
+              }
+              margin-right: 20px;
+
+              a {
+                width: 22px;
+                height: 19px;
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #bbbade;
+                border-bottom: 1px solid transparent;
+                padding-bottom: 5px;
+                background: none;
+                border: none;
+                outline: none;
+                text-decoration: none;
+
+                &:active,
+                &:focus,
+                &:hover,
+                &:visited {
+                  background: none;
+                  border: none;
+                  outline: none;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+
+        .tab-content {
+
+
+
+          .content {
+            .customer_week {
+              h5 {
+                padding-top: 8px;
+              }
+
+              p {
+                color: #8fb136;
+              }
+            }
+
+            .reclamations_week {
+              h5 {
+                padding-top: 8px;
+              }
+
+              p {
+                color: #63b136;
+              }
+            }
+
+            .therapies_week {
+              h5 {
+                margin-top: 7px;
+              }
+              p {
+                color: #3641b1;
+              }
+            }
+
+            img {
+              margin-bottom: 20px;
+              margin-top: 30px;
+            }
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px 0 32px;
+
+            h5 {
+              font-family: Raleway;
+              font-size: 16px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #bbbade;
+              text-align: center;
+            }
+
+            p {
+              font-size: 39px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #63b136;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a.show_customer {
+    background: none;
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      outline: none;
+      text-decoration: none;
+      box-shadow: none;
+      background: none;
+    }
+  }
+
+  .customer {
+    padding: 22px 32px;
+    .delete_customer_modal {
+      .modal-dialog  {
+        max-width: 641px;
+        .modal-body {
+          .delete_content {
+            padding-bottom: 63px;
+            h1 {
+              font-family: Raleway;
+              font-size: 35px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.66;
+              letter-spacing: normal;
+              text-align: center;
+              color: #1e2469;
+              padding: 41px 0px;
+            }
+
+            button.delete_btn {
+              width: 202px;
+            height: 49px;
+            opacity: 0.6;
+            border-radius: 8px;
+               border: solid 2px #979797;
+            font-family: Raleway;
+             font-size: 16px;
+             font-weight: 600;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: normal;
+             color: #6e6d8c;
+             background: none;
+
+             &:active,
+             &:focus,
+             &:hover,
+             &:visited {
+                background: none;
+                outline: none;
+                box-shadow: none;
+             }
+            }
+            button.dimiss_modal {
+              width: 202px;
+              height: 49px;
+              border: none;
+              border-radius: 8px;
+              box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+              background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+              font-family: Raleway;
+              font-size: 16px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #ffffff;
+              margin-left: 26px;
+              &:active,
+              &:focus,
+              &:hover,
+              &:visited {
+                border: none;
+                 text-decoration: none;
+                 outline: none;
+              }
+            }
+
+            .btn_content {
+              display: flex;
+              justify-content: center;
+              a {
+                  background: none;
+                  text-decoration: none;
+
+                  &:active,
+                  &:focus,
+                  &:hover,
+                  &:visited {
+                    background: none;
+                    box-shadow: none;
+                    outline: none;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sextion_1 {
+      display: flex;
+      justify-content: space-between;
+
+      .customer_info {
+        display: flex;
+      }
+
+      .img {
+        .user_image {
+          width: inherit;
+        }
+
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 26px;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+
+      p.name {
+        font-family: Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3f48ad;
+      }
+
+      p.insurance {
+        opacity: 0.59;
+        font-family: Raleway;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+      }
+
+      .link_customer {
+        button.index_edit_btn {
+          border: none;
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+          background: none;
+          margin-left: 16px;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            border: none;
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+            background: none;
+          }
+        }
+        .delete_btn_index {
+          outline: none;
+          text-decoration: none;
+          box-shadow: none;
+          background: none;
+          margin-left: 16px;
+          border: none;
+
+          &:active,
+          &:focus,
+          &:hover,
+          &:visited {
+            outline: none;
+            text-decoration: none;
+            box-shadow: none;
+            background: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  #new_customer_Naseguro,
+  #new_customer_cenasa,
+  #new_customer_humano {
+    .modal-dialog {
+      min-width: 80%;
+      background: transparent;
+      @media (max-width: 1520px) {
+        min-width: 90%;
+      }
+    }
+
+    .modal {
+      width: 50%;
+    }
+
+    .modal-content {
+      background: transparent;
+      border: none;
+    }
+
+    .close_icon {
+      position: absolute;
+      right: -25px;
+      top: -30px;
+      outline: none;
+      text-decoration: none;
+      box-shadow: none;
+      border: none;
+      background: none;
+      opacity: inherit;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        outline: none;
+        text-decoration: none;
+        box-shadow: none;
+        border: none;
+        background: none;
+        opacity: inherit;
+      }
+    }
+  }
+
+  .modal_new_customer {
+    background-color: #f7f7fb;
+    padding: 49px 200px;
+    border-radius: 8px;
+    @media (max-width: 1520px) {
+      padding: 49px 50px;
+    }
+    h5.modal-title {
+      padding-bottom: 58px;
+      font-family: Raleway;
+      font-size: 35px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.66;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1e2469;
+    }
+  }
+}
+//// nend index_customer_section
+
+.humano_form_container {
+  .file_image {
+    position: relative;
+    top: 5px;
+  }
+
+  .buttons {
+    padding-top: 88px;
+    display: flex;
+    justify-content: center;
+
+    .save_customer {
+      width: 202px;
+      height: 49px;
+      border-radius: 8px;
+      box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+      background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+      color: #fff;
+      margin-right: 28px;
+      border: none;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 19px 28px 0 rgba(200, 0, 255, 0.19);
+        background-image: linear-gradient(288deg, #7f00ff, #e100ff);
+      }
+    }
+
+    button.close_new_modal {
+      width: 202px;
+      height: 49px;
+      opacity: 0.6;
+      border-radius: 8px;
+      border: solid 2px #bbbade;
+      background: transparent;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        outline: none;
+        text-decoration: none;
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .section {
+    .content {
+      [type="radio"] {
+        margin-right: 3px;
+      }
+
+      .gender {
+        width: 100% !important;
+
+      }
+
+      label {
+        margin-right: 12px;
+      }
+      padding-top: 35px;
+
+      p {
+        margin: 0;
+      }
+
+      input {
+        border: none;
+        box-shadow: none;
+        background: none;
+      }
+
+      .input {
+        border-bottom: solid 1px #bbbade;
+        width: 178px;
+      }
+    }
+  }
+}
